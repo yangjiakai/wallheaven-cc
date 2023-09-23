@@ -29,7 +29,7 @@ export const routes = [
     name: "ui-lottie-animation",
     component: () =>
       import(
-        /* webpackChunkName: "ui-lottie-animation" */ "@/views/ui/LottieAnimationPage.vue"
+        "@/views/ui/LottieAnimationPage.vue"
       ),
     meta: {
       requiresAuth: true,
@@ -39,6 +39,22 @@ export const routes = [
     },
 
   },
+  {
+    path: "/ui/api-page",
+    name: "ui-api-page",
+    component: () =>
+      import(
+        "@/views/ui/ApiPage.vue"
+      ),
+    meta: {
+      requiresAuth: true,
+      layout: "ui",
+      category: "UI",
+      title: "ApiPage",
+    },
+
+  },
+
 
   ...LandingRoutes,
   ...AuthRoutes,
